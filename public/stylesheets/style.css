@@ -1,7 +1,108 @@
-body {
-    background: #141414;
+@font-face {
+    font-family: Constructa;
+    src: url('/font/Constructa-Black.woff');
+    font-weight: bold;
 }
 
+@font-face {
+    font-family: Constructa;
+    src: url('/font/Constructa-Regular.woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Constructa;
+    src: url('/font/Constructa-Thin.woff');
+    font-weight: 100;
+}
+
+*{
+    color:whitesmoke;
+}
+
+p{
+    font-size: large;
+}
+
+h1 {
+    text-align: center;
+    font-family: Constructa;
+    font-weight:100;
+    font-size: xx-large;
+}
+
+body {
+    background: #141414;
+    background-image: url("/images/bg.jpg");
+    background-attachment: fixed;
+    background-repeat: repeat;
+    font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif;
+}
+
+.hr {
+    margin: 0;
+    height: 30px;
+    border-style: solid;
+    border-color: whitesmoke;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+.hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: whitesmoke;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+h2{
+    font-size: 16pt;
+    font-weight: 100;
+}
+
+h2 > hr {
+    padding: 0;
+    border: none;
+    border-top: medium double whitesmoke;
+    color: #333;
+    text-align: center;
+}
+h2 > hr:after {
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: #323232;
+}
+
+.hours{
+    text-align: center;
+}
+
+.landing > div.row {
+    margin-top: 94px;
+    /*transform: translateY(-50%);*/
+}
+
+/*#hours{*/
+    /*border-top: 1px solid whitesmoke;*/
+/*}*/
+
+#logo{
+    width:100%;
+}
+
+.row{
+    padding: 1em 0;
+}
+
+nav.navbar{
+    position: fixed;
+}
 nav.navbar.navbar-default {
     background: transparent;
     border: 0;
@@ -13,6 +114,11 @@ nav.navbar.navbar-default {
     color: whitesmoke;
     transition: ease-in-out .5s;
     text-transform: lowercase;
+    padding: 10px; /* 0 15px 0;*/
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #999999;
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -26,6 +132,6 @@ nav.navbar.navbar-default {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
-    color: white;
+    color: white !important;
     background-color: transparent;
 }

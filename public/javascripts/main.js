@@ -3,6 +3,7 @@
  */
 (function () {
     $('.page-scroll a').bind('click', function (event) {
+        var $offset = 10;
         removeActiveClass();
         $(this).parent().addClass('active');
         var $position = $($(this).attr('href')).offset().top;
