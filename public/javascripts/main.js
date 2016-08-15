@@ -57,4 +57,18 @@
     $(window).scroll(function () {
         $('.navbar-collapse.in').collapse('hide');
     });
+
+
+    // Adds kickass app to webpage upon triple click of logo
+    $('#logo').click(function (e) {
+        if (e.detail === 3) {
+            var KICKASSVERSION = '2.0';
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            document.body.appendChild(s);
+            s.src = '//hi.kickassapp.com/kickass.js';
+            void(0);
+        }
+
+    })
 })();
