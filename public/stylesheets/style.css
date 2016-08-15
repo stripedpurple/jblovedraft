@@ -60,7 +60,8 @@ body {
 
 h2{
     font-size: 16pt;
-    font-style: light;
+    font-weight: 300;
+    font-style: normal;
 }
 
 h2 > hr {
@@ -101,10 +102,13 @@ h2 > hr:after {
 }
 
 nav.navbar{
+    z-index: 10000;
     position: fixed;
+    margin:0;
 }
 nav.navbar.navbar-default {
-    background: transparent;
+    background: #141414;
+    background-image: url("/images/bg.jpg");
     border: 0;
     box-shadow: none;
     padding: 15px 0 15px 0;
@@ -116,6 +120,7 @@ nav.navbar.navbar-default {
     transition: ease-in-out .5s;
     text-transform: lowercase;
     padding: 10px; /* 0 15px 0;*/
+    margin-top: 6px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -125,7 +130,7 @@ nav.navbar.navbar-default {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .open > a {
     color: white;
-    background: transparent;
+    background: #323232;
     border: 2px solid white;
     border-radius: 5px;
 }
